@@ -32,7 +32,7 @@ export class UpdateBookComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   updateBook(id) {
-    this.bookService.updateProduct(id, this.book).subscribe(() => {
+    this.bookService.updateBook(id, this.book).subscribe(() => {
       console.log('Thành công');
     }, () => {
       console.log('Xảy ra lỗi');
