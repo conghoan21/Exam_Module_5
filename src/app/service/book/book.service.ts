@@ -18,11 +18,11 @@ export class BookService {
     return this.http.get<Book[]>(API_URL + `/books`);
   }
 
-  createNewBook(product: Book): Observable<Book> {
+  createNewBook(book: Book): Observable<Book> {
     return this.http.post<Book>(API_URL + `/books`, book);
   }
 
-  updateBook(id: number, product: Book): Observable<Book> {
+  updateBook(id: number, book: Book): Observable<Book> {
     return this.http.put<Book>(API_URL + `/books/${id}`, book);
   }
 
