@@ -31,7 +31,7 @@ export class DeleteBookComponent implements OnInit {
   deleteBook(id) {
     this.bookService.deleteBookById(id).subscribe(() => {
         alert('Xoá thành công');
-        this.router.navigate(['/list-product']);
+        this.router.navigate(['/list-book']);
       },
       error => console.log(error));
   }
