@@ -1,0 +1,19 @@
+<p>List Book</p>
+<ng-container>
+  <p>Books : {{books.length}}</p>
+</ng-container>
+<table border="1px solid black">
+  <tr>
+    <th>STT</th>
+    <th>Title</th>
+    <th>Author</th>
+    <th colspan="2">Action</th>
+  </tr>
+  <tr *ngFor="let book of books; let i =index">
+      <td>{{i+1}}</td>
+    <td><a [routerLink]="['/detail-book/',book.id]">{{book.title}}</a></td>
+      <td>{{book.author}}</td>
+      <td><a [routerLink]="['/update-book/',book.id]">Edit</a></td>
+      <td><a [routerLink]="['/delete-book/',book.id]">Delete</a></td>
+  </tr>
+</table>
